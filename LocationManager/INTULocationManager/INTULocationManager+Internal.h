@@ -1,6 +1,5 @@
 //
-//  INTUViewController.h
-//  LocationManagerExample
+//  INTULocationManager+Internal.h
 //
 //  Copyright (c) 2014-2015 Intuit Inc.
 //
@@ -24,8 +23,11 @@
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "INTULocationManager.h"
 
-@interface INTUViewController : UIViewController
+/**
+ A category that exposes the internal (private) methods of INTULocationManager.
+ */
+@interface INTULocationManager (Internal) <CLLocationManagerDelegate>
 
 @end

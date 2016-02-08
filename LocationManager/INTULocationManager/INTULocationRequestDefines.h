@@ -29,6 +29,28 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+#if __has_feature(nullability)
+#   define __INTU_ASSUME_NONNULL_BEGIN      NS_ASSUME_NONNULL_BEGIN
+#   define __INTU_ASSUME_NONNULL_END        NS_ASSUME_NONNULL_END
+#   define __INTU_NULLABLE                  nullable
+#else
+#   define __INTU_ASSUME_NONNULL_BEGIN
+#   define __INTU_ASSUME_NONNULL_END
+#   define __INTU_NULLABLE
+#endif
+
+#if __has_feature(objc_generics)
+#   define __INTU_GENERICS(type, ...)       type<__VA_ARGS__>
+#else
+#   define __INTU_GENERICS(type, ...)       type
+#endif
+
+#ifdef NS_DESIGNATED_INITIALIZER
+#   define __INTU_DESIGNATED_INITIALIZER    NS_DESIGNATED_INITIALIZER
+#else
+#   define __INTU_DESIGNATED_INITIALIZER
+#endif
+
 static const CLLocationAccuracy kINTUHorizontalAccuracyThresholdCity =         5000.0;  // in meters
 static const CLLocationAccuracy kINTUHorizontalAccuracyThresholdNeighborhood = 1000.0;  // in meters
 static const CLLocationAccuracy kINTUHorizontalAccuracyThresholdBlock =         100.0;  // in meters
@@ -44,7 +66,7 @@ static const NSTimeInterval kINTUUpdateTimeStaleThresholdRoom =               5.
 /** The possible states that location services can be in. */
 typedef NS_ENUM(NSInteger, INTULocationServicesState) {
     /** User has already granted this app permissions to access location services, and they are enabled and ready for use by this app.
-     Note: this state will be returned for both the "When In Use" and "Always" permission levels. */
+        Note: this state will be returned for both the "When In Use" and "Always" permission levels. */
     INTULocationServicesStateAvailable,
     /** User has not yet responded to the dialog that grants this app permission to access location services. */
     INTULocationServicesStateNotDetermined,

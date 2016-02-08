@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B116683E18E5CEDD00D1E022"
                BuildableName = "LocationManagerExample.app"
                BlueprintName = "LocationManagerExample"
-               ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+               ReferencedContainer = "container:LocationManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B116685F18E5CEDD00D1E022"
-               BuildableName = "LocationManagerExampleTests.xctest"
-               BlueprintName = "LocationManagerExampleTests"
-               ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+               BuildableName = "LocationManagerTests.xctest"
+               BlueprintName = "LocationManagerTests"
+               ReferencedContainer = "container:LocationManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B116685F18E5CEDD00D1E022"
-               BuildableName = "LocationManagerExampleTests.xctest"
-               BlueprintName = "LocationManagerExampleTests"
-               ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+               BuildableName = "LocationManagerTests.xctest"
+               BlueprintName = "LocationManagerTests"
+               ReferencedContainer = "container:LocationManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "B116683E18E5CEDD00D1E022"
             BuildableName = "LocationManagerExample.app"
             BlueprintName = "LocationManagerExample"
-            ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+            ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "B116683E18E5CEDD00D1E022"
             BuildableName = "LocationManagerExample.app"
             BlueprintName = "LocationManagerExample"
-            ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+            ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,7 +98,7 @@
             BlueprintIdentifier = "B116683E18E5CEDD00D1E022"
             BuildableName = "LocationManagerExample.app"
             BlueprintName = "LocationManagerExample"
-            ReferencedContainer = "container:LocationManagerExample.xcodeproj">
+            ReferencedContainer = "container:LocationManager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
